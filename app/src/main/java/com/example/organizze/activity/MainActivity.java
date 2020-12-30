@@ -1,11 +1,13 @@
-package com.example.organizze;
+package com.example.organizze.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
+import com.example.organizze.R;
 import com.example.organizze.activity.CadastroActivity;
 import com.example.organizze.activity.LoginActivity;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
@@ -18,11 +20,10 @@ public class MainActivity extends IntroActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
+
+
 
         boasVindas();
-
-
     }
 
     public void btEntrar(View view){
