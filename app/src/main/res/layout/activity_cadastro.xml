@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.CadastroActivity">
+
+    <TextView
+        android:id="@+id/textView_cadastro_2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crie sua conta gratis"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/editTextText_cadastro_nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/editTextText_cadastro_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:ems="13"
+        android:backgroundTint="@color/black"
+        android:hint="Nome"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText_cadastro_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cadastro_2_1" />
+
+    <EditText
+        android:id="@+id/editTextText_cadastro_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+        android:ems="13"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:hint="Email"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText_cadastro_password"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText_cadastro_nome" />
+
+    <EditText
+        android:id="@+id/editTextText_cadastro_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+        android:ems="13"
+        android:backgroundTint="@color/black"
+        android:hint="Senha"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@+id/Button_cadastrar"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText_cadastro_email" />
+
+    <Button
+        android:id="@+id/Button_cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Cadastrar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/TextView_termos_de_uso"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText_cadastro_password" />
+
+    <TextView
+        android:id="@+id/TextView_termos_de_uso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Termos de uso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_cadastrar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
