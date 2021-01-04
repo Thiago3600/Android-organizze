@@ -17,7 +17,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -25,6 +28,7 @@ public class CadastroActivity extends AppCompatActivity {
     private Button cadastrarUsuario;
     private FirebaseAuth autenticacao;
     private Usuario usuario;
+    //private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +79,21 @@ public class CadastroActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
                             Toast.makeText(CadastroActivity.this,"Sucesso ao cadastrar usuario",Toast.LENGTH_SHORT).show();
                         }else{
-                            Toast.makeText(CadastroActivity.this,"Falha ao criar o usuario",Toast.LENGTH_SHORT).show();
+                            String excecao = "";
+                            try {
+                                throw task.getException();
+                            }catch (FirebaseAuthWeakPasswordException e){
+                                excecao = "Digite uma senha mais forte e pelo menos 6 digitos.";
+                            }catch (FirebaseAuthUserCollisionException e){
+                                excecao = "Esse email ja existe.";
+                            }catch (FirebaseAuthInvalidCredentialsException e){
+                                excecao = "Digite um email valido";
+                            }catch (Exception e){
+                                excecao = e.getMessage();
+                                e.printStackTrace();
+                            }
+
+                            Toast.makeText(CadastroActivity.this,"Falha ao criar o usuario: "+ excecao,Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
