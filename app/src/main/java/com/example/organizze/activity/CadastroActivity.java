@@ -3,6 +3,7 @@ package com.example.organizze.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -77,7 +78,7 @@ public class CadastroActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(CadastroActivity.this,"Sucesso ao cadastrar usuario",Toast.LENGTH_SHORT).show();
+                            abrirTelaPrincipal();
                         }else{
                             String excecao = "";
                             try {
@@ -97,6 +98,9 @@ public class CadastroActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+    public void abrirTelaPrincipal(){
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 
 }

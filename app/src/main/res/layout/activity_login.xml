@@ -8,7 +8,7 @@
     tools:context=".activity.LoginActivity">
 
     <TextView
-        android:id="@+id/textView_cadastro_2_"
+        android:id="@+id/textView_login_2_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_cadastro_2_" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_login_2_" />
 
     <EditText
         android:id="@+id/editTextText_login_password"
