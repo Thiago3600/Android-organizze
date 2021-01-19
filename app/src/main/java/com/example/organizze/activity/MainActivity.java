@@ -31,7 +31,7 @@ public class MainActivity extends IntroActivity {
     protected void onStart() {
         super.onStart();
         verificaUsuarioLogado();
-        finish();
+
     }
 
     @Override
