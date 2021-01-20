@@ -30,6 +30,7 @@ public class MainActivity extends IntroActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
         verificaUsuarioLogado();
 
     }
@@ -88,6 +89,7 @@ public class MainActivity extends IntroActivity {
     }
     public void verificaUsuarioLogado(){
         auth = ConfiguracaoFirebase.getAutenticacao();
+        auth.signOut();
         if (auth.getCurrentUser() != null){
             startActivity(new Intent(this, PrincipalActivity.class));
         }

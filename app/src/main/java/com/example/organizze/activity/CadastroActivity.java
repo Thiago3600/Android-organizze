@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.organizze.Config.ConfiguracaoFirebase;
+import com.example.organizze.Helper.Base64Custom;
 import com.example.organizze.Model.Usuario;
 import com.example.organizze.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -78,6 +79,8 @@ public class CadastroActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
+                            usuario.setIdUsuario(new Base64Custom().codificar(usuario.getEmail()));
+                            usuario.salvar();
                             abrirTelaPrincipal();
                         }else{
                             String excecao = "";

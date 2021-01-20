@@ -1,12 +1,31 @@
 package com.example.organizze.Model;
 
+import com.example.organizze.Config.ConfiguracaoFirebase;
+import com.example.organizze.Helper.Base64Custom;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
 public class Usuario {
 
+    private String idUsuario;
     private String nome;
     private String email;
     private String senha;
 
     public Usuario() {
+    }
+
+    public void salvar(){
+        DatabaseReference databaseReference = ConfiguracaoFirebase.getDatabase();
+        databaseReference.child("Usuario").child(this.getIdUsuario()).setValue(this);
+    }
+    @Exclude
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNome() {
@@ -23,8 +42,9 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
-    }
 
+    }
+    @Exclude
     public String getSenha() {
         return senha;
     }
