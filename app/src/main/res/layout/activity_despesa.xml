@@ -20,7 +20,7 @@
 
 
         <EditText
-            android:id="@+id/editTextTextValue"
+            android:id="@+id/editTextDespesaValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditData"
+            android:id="@+id/textInputEditDespesaData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutData">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditCategoria"
+            android:id="@+id/textInputEditDespesaCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCategoria">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditDescricao"
+            android:id="@+id/textInputEditDespesaDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textAutoComplete"
@@ -110,6 +110,6 @@
         app:fab_colorNormal="@color/colorPrimaryDespesa"
         app:fab_colorPressed="@color/colorPrimaryDarkDespesa"
         android:src="@drawable/ic_baseline_check_branco_24"
-
+        android:onClick="salvarDespesa"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

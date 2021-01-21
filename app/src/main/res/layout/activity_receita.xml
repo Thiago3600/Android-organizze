@@ -19,7 +19,7 @@
 
 
         <EditText
-            android:id="@+id/editTextTextValue"
+            android:id="@+id/editTextTextReceitaValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditData"
+            android:id="@+id/textInputEditReceitaData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutData">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditCategoria"
+            android:id="@+id/textInputEditReceitaCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCategoria">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditDescricao"
+            android:id="@+id/textInputEditReceitaDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textAutoComplete"
