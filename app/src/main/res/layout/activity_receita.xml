@@ -107,6 +107,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="32dp"
+        android:onClick="salvarReceita"
         app:fab_colorNormal="@color/colorPrimaryReceita"
         app:fab_colorPressed="@color/colorPrimaryDarkReceita"
         android:src="@drawable/ic_baseline_check_branco_24"
